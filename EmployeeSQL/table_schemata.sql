@@ -1,4 +1,4 @@
-﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
 
@@ -27,9 +27,10 @@ CREATE TABLE "dept_manager" (
     "dept_no" varchar   NOT NULL,
     "emp_no" INT   NOT NULL,
     CONSTRAINT "pk_dept_manager" PRIMARY KEY (
-        "dept_no"
+        "emp_no"
      )
 );
+
 
 CREATE TABLE "salaries" (
     "emp_no" INT   NOT NULL,
@@ -43,9 +44,10 @@ CREATE TABLE "dept_emp" (
     "emp_no" INT   NOT NULL,
     "dept_no" Varchar   NOT NULL,
     CONSTRAINT "pk_dept_emp" PRIMARY KEY (
-        "dept_no"
+        "emp_no", "dept_no"
      )
 );
+
 
 CREATE TABLE "titles" (
     "title_id" varchar   NOT NULL,
